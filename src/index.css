@@ -27,10 +27,8 @@
   .drop{
       @apply shadow border rounded py-2 px-3 md:mb-2 w-full md:w-1/2 text-gray-700 leading-tight focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none;
   }
-  .btn_1{
-    @apply w-full border border-yellow-500  bg-yellow-500 text-white rounded-lg p-2
+  .btn{
+    @apply border-2 border-yellow-500  bg-yellow-500 text-white rounded-xl uppercase py-2 px-4 font-semibold cursor-pointer hover:bg-yellow-700 transition duration-200 ease-in-out;
   }
-  .btn_2{
-    @apply w-1/2 border border-yellow-500  bg-yellow-500 text-white rounded-md p-2;
-  }
+
 }

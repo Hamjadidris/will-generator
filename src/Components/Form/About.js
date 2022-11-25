@@ -1,36 +1,18 @@
 
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
 
-const About = () => {
-  const [contactInfo, setContactInfo] = useState({
-    name: "",
-    gender: "",
-    email: "",
-    address: "",
-  });
-
-  const handleNameInputChange = (event) => {
-    setContactInfo({...contactInfo, name: event.target.value})
-  }
-  const handleGenderInputChange = (event) => {
-    setContactInfo({...contactInfo, gender: event.target.value})
-  }
-  const handleEmailInputChange = (event) => {
-    setContactInfo({...contactInfo, email: event.target.value})
-  }
-  const handleAddressInputChange = (event) => {
-    setContactInfo({...contactInfo, address: event.target.value})
-  }
-
-  const handleNext = (event) => {
-    // prevents the next button from refreshing the page
-    event.preventDefault();
-    console.log(contactInfo);
+export class About extends Component  {
+  continue = e => {
+    e.preventDefault();
+    this.props.nextStep();
   };
 
+  render(){
+  const { values, handleChange } = this.props;
+
   return (
-    <div className="form-container bg-gray-200">
+    <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-gray-300">
+
       <div className="contact_content p-16">
         <form className="contact_form">
         <div className="info flex-row md:flex ">
@@ -40,8 +22,8 @@ const About = () => {
             type="text"
             name="name"
             placeholder=""
-            onChange={handleNameInputChange}
-            value={contactInfo.name}
+            onChange={handleChange('name')}
+            defaultvalue={values.name}
             className="inp"
           />
           </div>
@@ -51,8 +33,8 @@ const About = () => {
               <select
                 name="gender"
                 id="dropdown"
-                onChange={handleGenderInputChange}
-                value={contactInfo.gender}
+                onChange={handleChange('gender')}
+                defaultvalue={values.gender}
                 className="inp">
                 <option value=" "> </option>
                 <option value="Male"> Male </option>
@@ -67,8 +49,8 @@ const About = () => {
             type="email"
             name="email"
             placeholder=""
-            onChange={handleEmailInputChange}
-            value={contactInfo.email}
+            onChange={handleChange('email')}
+            defaultvalue={values.email}
             className="inp"
           />
         </div>
@@ -79,21 +61,23 @@ const About = () => {
           type="text"
           name="address"
           placeholder=""
-          onChange={handleAddressInputChange}
-          value={contactInfo.address}
+          onChange={handleChange('address')}
+          defaultvalue={values.address}
           className="inp"
         />
         </div>
 
         </form>
         <div>
-            <Link to="/Legal">
-                <button className="btn_1">Next</button>
-             </Link>
+          <button
+            className="btn w-full"
+            onClick={this.continue}
+            >Next
+          </button>
         </div>
       </div>
     </div>
-  )
+  )};
 }
 
 export default About;

@@ -1,32 +1,22 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
 
+export class Legal extends Component  {
+  continue = e => {
+    e.preventDefault();
+    this.props.nextStep();
+  };
 
+  previous = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
 
-const Legal = () => {
-
-  const [contactInfo, setContactInfo] = useState({
-    name: "",
-    email: "",
-    address: "",
-    phoneNumber: "",
-  });
-
-  const handleNameInputChange = (event) => {
-    setContactInfo({...contactInfo, name: event.target.value})
-  }
-  const handleEmailInputChange = (event) => {
-    setContactInfo({...contactInfo, email: event.target.value})
-  }
-  const handlePhoneNumberInputChange = (event) => {
-    setContactInfo({...contactInfo, phoneNumber: event.target.value})
-  }
-  const handleAddressInputChange = (event) => {
-    setContactInfo({...contactInfo, address: event.target.value})
-  }
+  render(){
+  const { values, handleChange } = this.props;
 
   return (
-    <div className="bg-gray-200">
+    <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-gray-200">
+
       <div className="executer-container p-16">
       <div>
         <h2>Who will be your Will executor</h2>
@@ -44,8 +34,8 @@ const Legal = () => {
             type="text"
             name="name"
             placeholder=""
-            onChange={handleNameInputChange}
-            value={contactInfo.name}
+            onChange={handleChange('name')}
+            defaultvalue={values.name}
             className="inp"
           />
           </div>
@@ -56,8 +46,8 @@ const Legal = () => {
             type="email"
             name="email"
             placeholder=""
-            onChange={handleEmailInputChange}
-            value={contactInfo.email}
+            onChange={handleChange('email')}
+            defaultvalue={values.email}
             className="inp"
           />
         </div>
@@ -68,8 +58,8 @@ const Legal = () => {
           type="number"
           name="phoneNumber"
           pattern="[+0-9]{15, }"
-          onChange={handlePhoneNumberInputChange}
-          value={contactInfo.phoneNumber}
+          onChange={handleChange('phoneNumber')}
+          defaultvalue={values.phoneNumber}
           className="inp"
         />
       </div>
@@ -80,8 +70,8 @@ const Legal = () => {
           type="text"
           name="address"
           placeholder=""
-          onChange={handleAddressInputChange}
-          value={contactInfo.address}
+          onChange={handleChange('address')}
+          defaultvalue={values.address}
           className="inp"
         />
         </div>
@@ -103,8 +93,8 @@ const Legal = () => {
               type="text"
               name="name"
               placeholder=""
-              onChange={handleNameInputChange}
-              value={contactInfo.name}
+              onChange={handleChange('name')}
+              defaultvalue={values.name}
               className="inp"
             />
             </div>
@@ -115,8 +105,8 @@ const Legal = () => {
               type="email"
               name="email"
               placeholder=""
-              onChange={handleEmailInputChange}
-              value={contactInfo.email}
+              onChange={handleChange('email')}
+              defaultvalue={values.email}
               className="inp"
             />
           </div>
@@ -127,8 +117,8 @@ const Legal = () => {
             type="number"
             name="phoneNumber"
             pattern="[+0-9]{15, }"
-            onChange={handlePhoneNumberInputChange}
-            value={contactInfo.phoneNumber}
+            onChange={handleChange('phoneNumber')}
+            defaultvalue={values.phoneNumber}
             className="inp"
           />
         </div>
@@ -139,8 +129,8 @@ const Legal = () => {
             type="text"
             name="address"
             placeholder=""
-            onChange={handleAddressInputChange}
-            value={contactInfo.address}
+            onChange={handleChange('address')}
+            defaultvalue={values.address}
             className="inp"
           />
           </div>
@@ -164,8 +154,8 @@ const Legal = () => {
               type="text"
               name="name"
               placeholder=""
-              onChange={handleNameInputChange}
-              value={contactInfo.name}
+              onChange={handleChange('name')}
+              defaultvalue={values.name}
               className="inp"
             />
             </div>
@@ -176,8 +166,8 @@ const Legal = () => {
               type="email"
               name="email"
               placeholder=""
-              onChange={handleEmailInputChange}
-              value={contactInfo.email}
+              onChange={handleChange('email')}
+              defaultvalue={values.email}
               className="inp"
             />
           </div>
@@ -188,8 +178,8 @@ const Legal = () => {
             type="number"
             name="phoneNumber"
             pattern="[+0-9]{15, }"
-            onChange={handlePhoneNumberInputChange}
-            value={contactInfo.phoneNumber}
+            onChange={handleChange('phoneNumber')}
+            defaultvalue={values.phoneNumber}
             className="inp"
           />
         </div>
@@ -200,8 +190,8 @@ const Legal = () => {
             type="text"
             name="address"
             placeholder=""
-            onChange={handleAddressInputChange}
-            value={contactInfo.address}
+            onChange={handleChange('address')}
+            defaultvalue={values.address}
             className="inp"
           />
           </div>
@@ -209,16 +199,17 @@ const Legal = () => {
           </form>
         </div>
         <div className="">
-            <Link to="/About">
-              <button className="btn_2">Previous</button>
-            </Link>
-            <Link to="/Assets">
-                <button className="btn_2">Next</button>
-             </Link>
+              <button
+                className="btn w-1/2"
+                onClick={this.previous}>Previous</button>
+
+                <button
+                className="btn w-1/2"
+                onClick={this.continue}>Next</button>
         </div>
       </div>
     </div>
-  )
+  )};
 }
 
 export default Legal;

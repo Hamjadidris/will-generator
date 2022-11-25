@@ -1,37 +1,22 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
 
-const Assets = () => {
-  const [contactInfo, setContactInfo] = useState({
-    name: "",
-    email: "",
-    assets: "",
-    beneficiary: "",
-    phoneNumber: "",
-    percentage: "",
-  });
+export class Assets extends Component  {
+  continue = e => {
+    e.preventDefault();
+    this.props.nextStep();
+  };
 
-  const handleNameInputChange = (event) => {
-    setContactInfo({...contactInfo, name: event.target.value})
-  }
-  const handleEmailInputChange = (event) => {
-    setContactInfo({...contactInfo, email: event.target.value})
-  }
-  const handleAssestsInputChange = (event) => {
-    setContactInfo({...contactInfo, assets: event.target.value})
-  }
-  const handleBeneficiaryInputChange = (event) => {
-    setContactInfo({...contactInfo, beneficiary: event.target.value})
-  }
-  const handlePhoneNumberInputChange = (event) => {
-    setContactInfo({...contactInfo, phoneNumber: event.target.value})
-  }
-  const handlePercentageInputChange = (event) => {
-    setContactInfo({...contactInfo, percentage: event.target.value})
-  }
+  previous = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
+
+  render(){
+  const { values, handleChange } = this.props;
 
   return (
-    <div className="bg-gray-200 p-16">
+    <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-gray-300">
+
     <div>
       <h2> Who would you like to give your assets too?</h2>
 
@@ -63,10 +48,10 @@ const Assets = () => {
         <label className="lab"> Type of Assest </label>
         <input
         type="text"
-        name="assests"
+        name="assets"
         placeholder="eg. properties, assests, accounts, shares"
-        onChange={handleAssestsInputChange}
-        value={contactInfo.assests}
+        onChange={handleChange('assets')}
+        defaultvalue={values.assets}
         className="inp"
         />
       </div>
@@ -75,8 +60,8 @@ const Assets = () => {
           <select
             name="beneficiary"
             id="dropdown"
-            onChange={handleBeneficiaryInputChange}
-            value={contactInfo.beneficiary}
+            onChange={handleChange('beneficiary')}
+            defaultvalue={values.beneficiary}
             className="inp">
             <option value=" "> </option>
             <option value="1"> 1 </option>
@@ -86,14 +71,16 @@ const Assets = () => {
       </div>
       </div>
 
+      <div className="beneficiary-container">
+      <p className="">Beneficiary 1 </p>
       <div className="mb-6">
         <label className="lab"> Full Name </label>
         <input
         type="text"
         name="name"
         placeholder=""
-        onChange={handleNameInputChange}
-        value={contactInfo.name}
+        onChange={handleChange('name')}
+        defaultvalue={values.name}
         className="inp"
       />
       </div>
@@ -104,8 +91,8 @@ const Assets = () => {
         type="email"
         name="email"
         placeholder=""
-        onChange={handleEmailInputChange}
-        value={contactInfo.email}
+        onChange={handleChange('email')}
+        defaultvalue={values.email}
         className="inp"
       />
     </div>
@@ -116,8 +103,8 @@ const Assets = () => {
       type="number"
       name="phoneNumber"
       pattern="[+0-9]{15, }"
-      onChange={handlePhoneNumberInputChange}
-      value={contactInfo.phoneNumber}
+      onChange={handleChange('phoneNumber')}
+      defaultvalue={values.phoneNumber}
       className="inp"
     />
   </div>
@@ -126,26 +113,30 @@ const Assets = () => {
   <label className="lab"> Percentage </label>
   <input
     type="number"
-    name="phoneNumber"
-    pattern="[0-9]{15, }"
-    onChange={handlePercentageInputChange}
-    value={contactInfo.percentage}
+    name="percentage"
+    pattern="[0-9]{3, }"
+    onChange={handleChange('percentage')}
+    defaultvalue={values.percentage}
     className="inp"
     />
+    </div>
     </div>
     </div>
     </form>
     </div>
     <div className="mt-6 flex flex-row">
-      <Link to="/Legal">
-        <button className="w-1/2 border border-yellow-500  bg-yellow-500 text-white rounded-lg p-2">Previous</button>
-      </Link>
-      <Link to="/Download">
-          <button className="w-1/2 border border-yellow-500  bg-yellow-500 text-white rounded-lg p-2">Download</button>
-       </Link>
+
+        <button
+          className="btn w-1/2"
+          onClick={this.previous}>Previous</button>
+
+          <button
+            className="btn w-1/2"
+            onClick={this.continue}>Next</button>
+
     </div>
     </div>
   )
 }
-
+}
 export default Assets;
