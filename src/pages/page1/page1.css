@@ -73,4 +73,8 @@
     .intro h1 {
         font-size: 2.5rem;
       }
+      .intro h4 {
+        font-size: 0.9rem;
+        color: rgba(215, 210, 210, 0.797);
+      }
   }
