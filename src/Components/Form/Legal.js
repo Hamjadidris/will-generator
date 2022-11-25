@@ -19,7 +19,7 @@ export class Legal extends Component  {
 
       <div className="executer-container p-16">
       <div>
-        <h2>Who will be your Will executor</h2>
+        <h2>Who will be your Will executor?</h2>
         <p>An Executor is a legally appointed person choosen by you, responsible for successfully fullfiling the wishes of your Will.
           An Executor must be above 18 years, of sound mind and free of debt. You should obtaion the consent of your Executor before
           appointment, to avoid a solution where he is unwilling to act as the Executorof your Will. An Executor can also be a Will
@@ -32,10 +32,10 @@ export class Legal extends Component  {
             <label className="lab"> Full Name </label>
             <input
             type="text"
-            name="name"
+            name="exeName"
             placeholder=""
-            onChange={handleChange('name')}
-            defaultvalue={values.name}
+            onChange={handleChange('exeName')}
+            defaultValue={values.exeName}
             className="inp"
           />
           </div>
@@ -44,10 +44,10 @@ export class Legal extends Component  {
           <label className="lab"> Email </label>
           <input
             type="email"
-            name="email"
+            name="exeEmail"
             placeholder=""
-            onChange={handleChange('email')}
-            defaultvalue={values.email}
+            onChange={handleChange('exeEmail')}
+            defaultValue={values.exeEmail}
             className="inp"
           />
         </div>
@@ -56,10 +56,10 @@ export class Legal extends Component  {
         <label className="lab"> Phone Number </label>
         <input
           type="number"
-          name="phoneNumber"
+          name="exeNumber"
           pattern="[+0-9]{15, }"
-          onChange={handleChange('phoneNumber')}
-          defaultvalue={values.phoneNumber}
+          onChange={handleChange('exeNumber')}
+          defaultValue={values.exeNumber}
           className="inp"
         />
       </div>
@@ -70,8 +70,8 @@ export class Legal extends Component  {
           type="text"
           name="address"
           placeholder=""
-          onChange={handleChange('address')}
-          defaultvalue={values.address}
+          onChange={handleChange('exeAddress')}
+          defaultValue={values.exeAddress}
           className="inp"
         />
         </div>
@@ -91,10 +91,10 @@ export class Legal extends Component  {
               <label className="lab"> Full Name </label>
               <input
               type="text"
-              name="name"
+              name="altName"
               placeholder=""
-              onChange={handleChange('name')}
-              defaultvalue={values.name}
+              onChange={handleChange('altName')}
+              defaultValue={values.altName}
               className="inp"
             />
             </div>
@@ -103,10 +103,10 @@ export class Legal extends Component  {
             <label className="lab"> Email </label>
             <input
               type="email"
-              name="email"
+              name="altEmail"
               placeholder=""
-              onChange={handleChange('email')}
-              defaultvalue={values.email}
+              onChange={handleChange('altEmail')}
+              defaultValue={values.altEmail}
               className="inp"
             />
           </div>
@@ -115,10 +115,10 @@ export class Legal extends Component  {
           <label className="lab"> Phone Number </label>
           <input
             type="number"
-            name="phoneNumber"
+            name="altNumber"
             pattern="[+0-9]{15, }"
-            onChange={handleChange('phoneNumber')}
-            defaultvalue={values.phoneNumber}
+            onChange={handleChange('altNumber')}
+            defaultValue={values.altNumber}
             className="inp"
           />
         </div>
@@ -127,10 +127,10 @@ export class Legal extends Component  {
             <label className="lab"> Home Address </label>
             <textarea
             type="text"
-            name="address"
+            name="altAddress"
             placeholder=""
-            onChange={handleChange('address')}
-            defaultvalue={values.address}
+            onChange={handleChange('altAddress')}
+            defaultValue={values.altAddress}
             className="inp"
           />
           </div>
@@ -152,10 +152,10 @@ export class Legal extends Component  {
               <label className="lab"> Full Name </label>
               <input
               type="text"
-              name="name"
+              name="gauName"
               placeholder=""
-              onChange={handleChange('name')}
-              defaultvalue={values.name}
+              onChange={handleChange('gauName')}
+              defaultValue={values.gauName}
               className="inp"
             />
             </div>
@@ -164,10 +164,10 @@ export class Legal extends Component  {
             <label className="lab"> Email </label>
             <input
               type="email"
-              name="email"
+              name="gauEmail"
               placeholder=""
-              onChange={handleChange('email')}
-              defaultvalue={values.email}
+              onChange={handleChange('gauEmail')}
+              defaultValue={values.gauEmail}
               className="inp"
             />
           </div>
@@ -176,10 +176,10 @@ export class Legal extends Component  {
           <label className="lab"> Phone Number </label>
           <input
             type="number"
-            name="phoneNumber"
+            name="gauNumber"
             pattern="[+0-9]{15, }"
-            onChange={handleChange('phoneNumber')}
-            defaultvalue={values.phoneNumber}
+            onChange={handleChange('gauNumber')}
+            defaultValue={values.gauNumber}
             className="inp"
           />
         </div>
@@ -188,10 +188,10 @@ export class Legal extends Component  {
             <label className="lab"> Home Address </label>
             <textarea
             type="text"
-            name="address"
+            name="gauAddress"
             placeholder=""
-            onChange={handleChange('address')}
-            defaultvalue={values.address}
+            onChange={handleChange('gauAddress')}
+            defaultValue={values.gauAddress}
             className="inp"
           />
           </div>

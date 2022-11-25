@@ -31,9 +31,9 @@ export class Assets extends Component  {
       </p>
 
       <ul>
-        <li><span className="font-bold">Movable assests </span>(for example: bonds, cash, company shares, vehicles, trust, jewelleries)</li>
-        <li><span className="font-bold">Immovable assests </span>(for example: tangible personal properties, lands, houses)</li>
-        <li><span className="font-bold">Digital assests </span>(for example: cryptocurrency accounts, online accounts, social media accounts)</li>
+        <li><span className="font-bold">Movable assets </span>(for example: bonds, cash, company shares, vehicles, trust, jewelleries)</li>
+        <li><span className="font-bold">Immovable assets </span>(for example: tangible personal properties, lands, houses)</li>
+        <li><span className="font-bold">Digital assets </span>(for example: cryptocurrency accounts, online accounts, social media accounts)</li>
       </ul>
 
       <p>Kindly key in thier share proportion in percentage (%). Note that the percentage split across all beneficiaries must add up to 100%</p>
@@ -44,24 +44,24 @@ export class Assets extends Component  {
     <form className="w-full max-w-sm mx-auto">
       <div className="">
       <div className="">
-      <div className="lab">
+      <div className="">
         <label className="lab"> Type of Assest </label>
         <input
         type="text"
         name="assets"
         placeholder="eg. properties, assests, accounts, shares"
-        onChange={handleChange('assets')}
-        defaultvalue={values.assets}
+        onChange={handleChange('assets1')}
+        defaultValue={values.assets1}
         className="inp"
         />
       </div>
       <div className="contact_form-div">
         <label className="lab"> Beneficiaries </label>
           <select
-            name="beneficiary"
+            name="benirs1"
             id="dropdown"
-            onChange={handleChange('beneficiary')}
-            defaultvalue={values.beneficiary}
+            onChange={handleChange('benirs1')}
+            defaultValue={values.beneficiary}
             className="inp">
             <option value=" "> </option>
             <option value="1"> 1 </option>
@@ -77,10 +77,10 @@ export class Assets extends Component  {
         <label className="lab"> Full Name </label>
         <input
         type="text"
-        name="name"
+        name="beniry1Name"
         placeholder=""
-        onChange={handleChange('name')}
-        defaultvalue={values.name}
+        onChange={handleChange('beniry1Name')}
+        defaultValue={values.beniry1Name}
         className="inp"
       />
       </div>
@@ -89,10 +89,10 @@ export class Assets extends Component  {
       <label className="lab"> Email </label>
       <input
         type="email"
-        name="email"
+        name="beniry1Email"
         placeholder=""
-        onChange={handleChange('email')}
-        defaultvalue={values.email}
+        onChange={handleChange('beniry1Email')}
+        defaultValue={values.beniry1Email}
         className="inp"
       />
     </div>
@@ -101,10 +101,10 @@ export class Assets extends Component  {
     <label className="lab"> Phone Number </label>
     <input
       type="number"
-      name="phoneNumber"
+      name="beniry1Number"
       pattern="[+0-9]{15, }"
-      onChange={handleChange('phoneNumber')}
-      defaultvalue={values.phoneNumber}
+      onChange={handleChange('beniry1Number')}
+      defaultValue={values.beniry1Number}
       className="inp"
     />
   </div>
@@ -113,10 +113,10 @@ export class Assets extends Component  {
   <label className="lab"> Percentage </label>
   <input
     type="number"
-    name="percentage"
+    name="beniry1Pert"
     pattern="[0-9]{3, }"
-    onChange={handleChange('percentage')}
-    defaultvalue={values.percentage}
+    onChange={handleChange('beniry1Pert')}
+    defaultValue={values.beniry1Pert}
     className="inp"
     />
     </div>
@@ -136,8 +136,8 @@ export class Assets extends Component  {
         type="text"
         name="assets"
         placeholder="eg. properties, assests, accounts, shares"
-        onChange={handleChange('assets')}
-        defaultvalue={values.assets}
+        onChange={handleChange('asset2')}
+        defaultValue={values.assets2}
         className="inp"
         />
       </div>
@@ -147,7 +147,7 @@ export class Assets extends Component  {
             name="beneficiary"
             id="dropdown"
             onChange={handleChange('beneficiary')}
-            defaultvalue={values.beneficiary}
+            defaultValue={values.benirs2}
             className="inp">
             <option value=" "> </option>
             <option value="1"> 1 </option>
@@ -163,10 +163,10 @@ export class Assets extends Component  {
         <label className="lab"> Full Name </label>
         <input
         type="text"
-        name="name"
+        name="beniry1Name"
         placeholder=""
-        onChange={handleChange('name')}
-        defaultvalue={values.name}
+        onChange={handleChange('beniry1Name')}
+        defaultValue={values.beniry1Name}
         className="inp"
       />
       </div>
@@ -175,10 +175,10 @@ export class Assets extends Component  {
       <label className="lab"> Email </label>
       <input
         type="email"
-        name="email"
+        name="beniry1Email"
         placeholder=""
-        onChange={handleChange('email')}
-        defaultvalue={values.email}
+        onChange={handleChange('beniry1Email')}
+        defaultValue={values.beniry1Email}
         className="inp"
       />
     </div>
@@ -187,10 +187,10 @@ export class Assets extends Component  {
     <label className="lab"> Phone Number </label>
     <input
       type="number"
-      name="phoneNumber"
+      name="beniry1Number"
       pattern="[+0-9]{15, }"
-      onChange={handleChange('phoneNumber')}
-      defaultvalue={values.phoneNumber}
+      onChange={handleChange('beniry1Number')}
+      defaultValue={values.beniry1Number}
       className="inp"
     />
   </div>
@@ -199,10 +199,10 @@ export class Assets extends Component  {
   <label className="lab"> Percentage </label>
   <input
     type="number"
-    name="percentage"
+    name="beniry1Pert"
     pattern="[0-9]{3, }"
-    onChange={handleChange('percentage')}
-    defaultvalue={values.percentage}
+    onChange={handleChange('beniry1Pert')}
+    defaultValue={values.beniry1Pert}
     className="inp"
     />
     </div>
@@ -221,18 +221,18 @@ export class Assets extends Component  {
         type="text"
         name="assets"
         placeholder="eg. properties, assests, accounts, shares"
-        onChange={handleChange('assets')}
-        defaultvalue={values.assets}
+        onChange={handleChange('assets3')}
+        defaultValue={values.assets3}
         className="inp"
         />
       </div>
       <div className="contact_form-div">
         <label className="lab"> Beneficiaries </label>
           <select
-            name="beneficiary"
+            name="benirs3"
             id="dropdown"
-            onChange={handleChange('beneficiary')}
-            defaultvalue={values.beneficiary}
+            onChange={handleChange('benirs3')}
+            defaultValue={values.benirs3}
             className="inp">
             <option value=" "> </option>
             <option value="1"> 1 </option>
@@ -248,10 +248,10 @@ export class Assets extends Component  {
         <label className="lab"> Full Name </label>
         <input
         type="text"
-        name="name"
+        name="beniry1Name"
         placeholder=""
-        onChange={handleChange('name')}
-        defaultvalue={values.name}
+        onChange={handleChange('beniry1Name')}
+        defaultValue={values.beniry1Name}
         className="inp"
       />
       </div>
@@ -260,10 +260,10 @@ export class Assets extends Component  {
       <label className="lab"> Email </label>
       <input
         type="email"
-        name="email"
+        name="beniry1Email"
         placeholder=""
-        onChange={handleChange('email')}
-        defaultvalue={values.email}
+        onChange={handleChange('beniry1Email')}
+        defaultValue={values.beniry1Email}
         className="inp"
       />
     </div>
@@ -272,10 +272,10 @@ export class Assets extends Component  {
     <label className="lab"> Phone Number </label>
     <input
       type="number"
-      name="phoneNumber"
+      name="beniry1Number"
       pattern="[+0-9]{15, }"
-      onChange={handleChange('phoneNumber')}
-      defaultvalue={values.phoneNumber}
+      onChange={handleChange('beniry1Number')}
+      defaultValue={values.beniry1Number}
       className="inp"
     />
   </div>
@@ -284,10 +284,10 @@ export class Assets extends Component  {
   <label className="lab"> Percentage </label>
   <input
     type="number"
-    name="percentage"
+    name="beniry1Pert"
     pattern="[0-9]{3, }"
-    onChange={handleChange('percentage')}
-    defaultvalue={values.percentage}
+    onChange={handleChange('beniry1Pert')}
+    defaultValue={values.beniry1Pert}
     className="inp"
     />
     </div>
@@ -306,18 +306,18 @@ export class Assets extends Component  {
         type="text"
         name="assets"
         placeholder="eg. properties, assests, accounts, shares"
-        onChange={handleChange('assets')}
-        defaultvalue={values.assets}
+        onChange={handleChange('assets4')}
+        defaultValue={values.assets4}
         className="inp"
         />
       </div>
       <div className="contact_form-div">
         <label className="lab"> Beneficiaries </label>
           <select
-            name="beneficiary"
+            name="benirs4"
             id="dropdown"
-            onChange={handleChange('beneficiary')}
-            defaultvalue={values.beneficiary}
+            onChange={handleChange('benirs4')}
+            defaultValue={values.benirs4}
             className="inp">
             <option value=" "> </option>
             <option value="1"> 1 </option>
@@ -333,10 +333,10 @@ export class Assets extends Component  {
         <label className="lab"> Full Name </label>
         <input
         type="text"
-        name="name"
+        name="beniry1Name"
         placeholder=""
-        onChange={handleChange('name')}
-        defaultvalue={values.name}
+        onChange={handleChange('beniry1Name')}
+        defaultValue={values.beniry1Name}
         className="inp"
       />
       </div>
@@ -345,10 +345,10 @@ export class Assets extends Component  {
       <label className="lab"> Email </label>
       <input
         type="email"
-        name="email"
+        name="beniry1Email"
         placeholder=""
-        onChange={handleChange('email')}
-        defaultvalue={values.email}
+        onChange={handleChange('beniry1Email')}
+        defaultValue={values.beniry1Email}
         className="inp"
       />
     </div>
@@ -357,10 +357,10 @@ export class Assets extends Component  {
     <label className="lab"> Phone Number </label>
     <input
       type="number"
-      name="phoneNumber"
+      name="beniry1Number"
       pattern="[+0-9]{15, }"
-      onChange={handleChange('phoneNumber')}
-      defaultvalue={values.phoneNumber}
+      onChange={handleChange('beniry1Number')}
+      defaultValue={values.beniry1Number}
       className="inp"
     />
   </div>
@@ -369,10 +369,10 @@ export class Assets extends Component  {
   <label className="lab"> Percentage </label>
   <input
     type="number"
-    name="percentage"
+    name="beniry1Pert"
     pattern="[0-9]{3, }"
-    onChange={handleChange('percentage')}
-    defaultvalue={values.percentage}
+    onChange={handleChange('beniry1Pert')}
+    defaultValue={values.beniry1Pert}
     className="inp"
     />
     </div>

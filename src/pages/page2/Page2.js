@@ -19,6 +19,31 @@ export class Page2 extends Component  {
     phoneNumber: "",
     percentage: "",
     beneficiary: "",
+    exeName: "",
+    exeEmail: "",
+    exeNumber: "",
+    exeAddress: "",
+    altName: "",
+    altEmail: "",
+    altNumber: "",
+    altAddress: "",
+    gauName: "",
+    gauEmail: "",
+    gauNumber: "",
+    gauAddress: "",
+    assets1: "",
+    assets2: "",
+    assets3: "",
+    assets4: "",
+    benirs1: "",
+    benirs2: "",
+    benirs3: "",
+    benirs4: "",
+    beniry1Name: "",
+    beniry1Email: "",
+    beniry1Number: "",
+    beniry1Address: "",
+    beniry1Pert: "",
   }
   // proceed to the next step
 nextStep = () => {
@@ -33,14 +58,22 @@ this.setState({ step: step - 1 });
 
   //Handle field onChange
   handleChange = input => e => {
-    this.setState({[input]: e.target.value});
+    this.setState({ [input]: e.target.value });
   };
+
 
 
   render () {
     const { step } = this.state;
-    const { name, email, gender, phoneNumber, address, percentage,beneficiary } = this.state;
-    const values = { name, email, gender, phoneNumber, address, percentage,beneficiary }
+    const {
+      name, email, gender, phoneNumber, address, percentage,beneficiary, exeName, exeEmail, exeNumber, exeAddress,
+      altName, altEmail, altNumber, altAddress, gauName, gauEmail, gauNumber, gauAddress, assets1, assets2, assets3, assets4,
+      benirs1, benirs2, benirs3, benirs4, beniry1Name, beniry1Email, beniry1Number, beniry1Address, beniry1Pert
+     } = this.state;
+    const values = {
+      name, email, gender, phoneNumber, address, percentage, beneficiary, exeName, exeEmail, exeNumber, exeAddress,
+      altName, altEmail, altNumber, altAddress, gauName, gauEmail, gauNumber, gauAddress,assets1, assets2, assets3, assets4,
+      benirs1, benirs2, benirs3, benirs4,  beniry1Name, beniry1Email, beniry1Number, beniry1Address, beniry1Pert}
 
     switch(step) {
       case 1:

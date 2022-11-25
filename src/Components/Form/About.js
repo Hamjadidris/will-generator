@@ -15,7 +15,7 @@ export class About extends Component  {
 
       <div className="contact_content p-16">
         <form className="contact_form">
-        <div className="info flex-row md:flex ">
+        <div className="info flex-row md:flex md:gap-10">
           <div className="contact_form-div">
             <label className="lab"> Full Name </label>
             <input
@@ -23,8 +23,8 @@ export class About extends Component  {
             name="name"
             placeholder=""
             onChange={handleChange('name')}
-            defaultvalue={values.name}
-            className="inp"
+            defaultValue={values.name}
+            className="inp md:px-8"
           />
           </div>
 
@@ -34,8 +34,8 @@ export class About extends Component  {
                 name="gender"
                 id="dropdown"
                 onChange={handleChange('gender')}
-                defaultvalue={values.gender}
-                className="inp">
+                defaultValue={values.gender}
+                className="inp md:px-24 md:mx-2">
                 <option value=" "> </option>
                 <option value="Male"> Male </option>
                 <option value="Female"> Female </option>
@@ -50,7 +50,7 @@ export class About extends Component  {
             name="email"
             placeholder=""
             onChange={handleChange('email')}
-            defaultvalue={values.email}
+            defaultValue={values.email}
             className="inp"
           />
         </div>
@@ -62,15 +62,15 @@ export class About extends Component  {
           name="address"
           placeholder=""
           onChange={handleChange('address')}
-          defaultvalue={values.address}
+          defaultValue={values.address}
           className="inp"
         />
         </div>
 
         </form>
-        <div>
+        <div className="mt-4 ">
           <button
-            className="btn w-full"
+            className="btn w-full mx-auto"
             onClick={this.continue}
             >Next
           </button>
