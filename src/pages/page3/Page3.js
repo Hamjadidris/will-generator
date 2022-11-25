@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Download from '../../components/Download'
 const Page3 = () => {
   return (
-    <div>Page3</div>
+    <div>
+        {/* <Download /> */}
+    </div>
   )
 }
 

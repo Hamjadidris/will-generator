@@ -11,9 +11,10 @@ const Page1 = () => {
             <h3>Plan for the rainy day</h3>
             <h1>WILL GENERATOR</h1>
             <h4>Just because you can't be with your family doesn't mean your property shouldn't </h4>
+            <h2>Make a Will</h2>
         </section>
         <Link to="/info">
-            <button className='generate-btn'>Make a Will</button>
+            <button className='generate-btn'>Get Started</button>
          </Link>
     </div>
   )
