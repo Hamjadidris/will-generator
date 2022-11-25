@@ -14,9 +14,9 @@ export class Generate extends Component  {
   render(){
 
   return (
-    <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-gray-300">
+    <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-gray-100">
 
-    <div>
+    <div className="p-16">
       <h2> Your Will is almost done!!</h2>
       <p>
         Kindly review all entered details. After downloading and closing this session, all data become un retrievable
@@ -29,7 +29,7 @@ export class Generate extends Component  {
         Click on the GENERATE button below, and be a little patient while we proccess your info and generate your Will.
       </p>
     </div>
-    <div>
+    <div className="flex mx-4">
     <button
       className="btn w-1/2"
       onClick={this.previous}>Previous</button>

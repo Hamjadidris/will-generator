@@ -11,7 +11,7 @@ export class About extends Component  {
   const { values, handleChange } = this.props;
 
   return (
-    <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-gray-300">
+    <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-gray-100">
 
       <div className="contact_content p-16">
         <form className="contact_form">

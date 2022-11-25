@@ -15,7 +15,7 @@ export class Legal extends Component  {
   const { values, handleChange } = this.props;
 
   return (
-    <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-gray-200">
+    <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-gray-100">
 
       <div className="executer-container p-16">
       <div>
