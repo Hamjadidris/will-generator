@@ -6,8 +6,8 @@ const Generate = () => {
     <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-gray-200">
 
     <div>
-      <h2> Your Will is almost done!!</h2>
-
+      <h2> Thank you trusting us </h2>
+      <p> Your download is ready</p>
     </div>
     <div>
     <Link to="/Download">

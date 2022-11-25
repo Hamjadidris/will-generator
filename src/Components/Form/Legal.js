@@ -26,7 +26,7 @@ export class Legal extends Component  {
           beneficiary.
         </p>
         </div>
-        <form className="w-full max-w-sm">
+        <form className="w-full max-w-sm mx-auto">
           <div className="lab">
           <div className="mb-6">
             <label className="lab"> Full Name </label>
@@ -85,7 +85,7 @@ export class Legal extends Component  {
             will stand in as the main Executor of your Will.
           </p>
 
-          <form className="w-full max-w-sm">
+          <form className="w-full max-w-sm mx-auto">
             <div className="lab">
             <div className="mb-6">
               <label className="lab"> Full Name </label>
@@ -146,7 +146,7 @@ export class Legal extends Component  {
             <span className="font-bold text-xs">(if applicable)</span>
           </p>
 
-          <form className="w-full max-w-sm">
+          <form className="w-full max-w-sm mx-auto mb-16">
             <div className="lab">
             <div className="mb-6">
               <label className="lab"> Full Name </label>
@@ -198,9 +198,9 @@ export class Legal extends Component  {
           </div>
           </form>
         </div>
-        <div className="">
+        <div className="flex ">
               <button
-                className="btn w-1/2"
+                className="btn w-1/2 mr-2"
                 onClick={this.previous}>Previous</button>
 
                 <button
