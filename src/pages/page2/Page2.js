@@ -1,15 +1,24 @@
-import React from 'react'
+
+import About from '../../Components/Form/About';
+import Legal from '../../Components/Form/Legal';
+import Assets from '../../Components/Form/Assets';
+import Download from '../../Components/Form/Download';
 import { Link } from 'react-router-dom';
 
-const Page2 = () => {
+// import { Routes, Route, Link } from 'react-router-dom';
+
+function Page2() {
   return (
-    <div>
-        <h1>GET USER INFO</h1>
-        <Link to="/will">
-            <button>To Page3</button>
-         </Link>
+    <div className="Pages">
+      <About />
+      <Legal />
+      <Assets />
+      <Download />
+      <Link to="/will">
+          <button>Next Page</button>
+       </Link>
     </div>
-  )
+  );
 }
 
-export default Page2
+export default Page2;
