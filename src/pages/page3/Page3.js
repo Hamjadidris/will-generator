@@ -1,8 +1,10 @@
 import React from 'react'
 import './page3.css'
 import { useState,useEffect } from 'react'
-import Download from '../../components/Download'
+import Download from '../../components/will/Download'
+import Will from '../../components/will/Will'
 import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader'
+
 
 const Page3 = () => {
     const [loading, setLoading] = useState(false) 
@@ -15,7 +17,7 @@ const Page3 = () => {
     },[])
   return (
     <div>
-        {
+        {/* {
             loading ?
             (
                 <div className='loader'>
@@ -29,8 +31,10 @@ const Page3 = () => {
                 </div>
             )
             :
-                ('yoo')
-        }
+                (<Will/>)
+        } */}
+        <Will/>
+
     </div>
   )
 }

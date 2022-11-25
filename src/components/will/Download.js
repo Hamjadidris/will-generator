@@ -7,8 +7,10 @@ const Download = ({rootElementId, downloadFileName}) => {
         const input = document.getElementById (rootElementId)
         html2canvas(input).then( (canvas) => {
         const imgData = canvas.toDataURL("image/png")
+        const imgWidth = 400
+        const imgHeight = canvas.height * imgWidth / canvas.width
         const pdf = new jsPDF('portrait', 'pt','a4')
-        pdf. addImage (imgData,"JPEG", 0, 0)
+        pdf. addImage (imgData,"JPEG", 100, 100, imgWidth, imgHeight)
     pdf.save(`${(downloadFileName)}`)
     })
     }

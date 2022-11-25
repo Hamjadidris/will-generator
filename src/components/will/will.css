@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.will-container{
+    width: 100%;
+}
+.will{
+    margin-left: 10vh;
+    width: 700px;
+    height: 80vh;
+}
+.will header{
+    text-align: center;
+}
+.will section{
+    margin: 30px 0;
+}
+
+.will section p{
+    margin: 20px 0;
+    font-size: 1.1rem;
+    line-break: normal;
+}

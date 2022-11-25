@@ -3,6 +3,7 @@ import './page1.css'
 import family from '../../assets/family.jpg'
 import { Link } from 'react-router-dom';
 
+
 const Page1 = () => {
   return (
     <div className='page1'>
@@ -16,6 +17,7 @@ const Page1 = () => {
         <Link to="/info">
             <button className='generate-btn'>Get Started</button>
          </Link>
+
     </div>
   )
 }
