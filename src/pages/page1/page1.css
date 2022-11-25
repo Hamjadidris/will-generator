@@ -50,10 +50,16 @@
   height: 4rem;
   color: #fff;
   font-size: 1.5rem;
+  cursor: pointer;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1.5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 1s ease;
+}
+.generate-btn:hover{
+    transform: scale(1.1);
+    backdrop-filter: blur(5px);
 }
 @media (max-width: 768px) {
     .family{

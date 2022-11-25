@@ -13,7 +13,7 @@ const Page1 = () => {
             <h4>Just because you can't be with your family doesn't mean your property shouldn't </h4>
         </section>
         <Link to="/info">
-            <button className='generate-btn'>Start Generating</button>
+            <button className='generate-btn'>Make a Will</button>
          </Link>
     </div>
   )
