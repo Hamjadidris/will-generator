@@ -16,7 +16,7 @@ export class About extends Component  {
       <div className="contact_content p-16">
         <form className="contact_form">
         <div className="info flex-row md:flex ">
-          <div className="contact_form-div  m-2">
+          <div className="contact_form-div">
             <label className="lab"> Full Name </label>
             <input
             type="text"
